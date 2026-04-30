@@ -1,0 +1,23 @@
+public class CrystalOptimizer implements ModInitializer {
+    public static final String MOD_ID = \"crystaloptimizer\";
+    public static KeyBinding CRYSTAL_KEY;
+
+    @Override
+    public void onInitialize() {
+        CRYSTAL_KEY = KeyBindingHelper.registerKeyBinding(new KeyBinding(
+            \"key.crystaloptimizer.use\", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_R, \"category.crystaloptimizer\"));
+        
+        ClientTickEvents.END_CLIENT_TICK.register(client -> {
+            if (CRYSTAL_KEY.wasPressed()) {
+
+            }
+        });
+    }
+}
+
+
+public class CrystalRenderer {
+    public static void optimizeRendering(Entity entity) {
+
+    }
+}
